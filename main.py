@@ -3,7 +3,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 #127.0.0.1:8000
-@app.get("/")
+@app.get("/main")
 async def root():
     return {"message": "Hello World"}
 
