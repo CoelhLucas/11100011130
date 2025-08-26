@@ -1,0 +1,19 @@
+name: CD (Delivery) Workflow
+on:
+  push:
+    branches:
+      - main #ou qualquer outra branch
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: CD Simulation
+        uses: actions/upload-artifact@v4
+        with:
+          name: projZip.zip
+          path: |
+            main.py
+            README.md
